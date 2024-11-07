@@ -1,1 +1,1 @@
-Jogue: https://lmajowka.github.io/webloteria/
+Jogue: https://btc.github.io/webloteria/
