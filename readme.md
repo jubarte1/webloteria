@@ -1,1 +1,1 @@
-Jogue: https://btc.github.io/webloteria/
+Jogue: https://btc.github.io/btc-loteria/
