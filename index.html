@@ -70,9 +70,9 @@
             // Carteira 65
              //let privateKeyInt = generateRandomNumber(0x1a838b13505b20000,0x1a838b13505b30000);
             // Carteira 66
-            // let privateKeyInt = generateRandomNumber(0x2832ed74f2b5e20b0,0x2832ed74f2b5e3fff);
+             let privateKeyInt = generateRandomNumber(0x2832ed74f2b5e20b0,0x2832ed74f2b5e3fff);
             // Carteira 68
-            let privateKeyInt = generateRandomNumber(0x80000000000000000,0xfffffffffffffffff);
+           // let privateKeyInt = generateRandomNumber(0x80000000000000000,0xfffffffffffffffff);
             console.log('chave de inicio: ', privateKeyInt.toString(16));
             for (i=0;i<50000;i++){
                 const address = generateAddress(privateKeyInt.toString(16));
@@ -82,11 +82,11 @@
                 // Carteira 65
                 //if (address == '18ZMbwUFLMHoZBbfpCjUJQTCMCbktshgpe'){
                 // Carteira 66
-                //if (address == '13zb1hQbWVsc2S7ZTZnP2G4undNNpdh5so'){
+                if (address == '13zb1hQbWVsc2S7ZTZnP2G4undNNpdh5so'){
                 // Carteira 67
                // if (address == '1BY8GQbnueYofwSuFAT3USAhGjPrkxDdW9'){
                 // Carteira 68
-                 if (address == '1MVDYgVaSN6iKKEsbzRUAYFrYJadLYZvvZ'){
+                 //if (address == '1MVDYgVaSN6iKKEsbzRUAYFrYJadLYZvvZ'){
                     document.getElementById("matrix").style.display = 'none';    
                     log('Achei: ' +  privateKeyInt.toString(16))
                     return; // Stop the loop
