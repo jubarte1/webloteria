@@ -41,7 +41,7 @@
 
 
 <body style="padding: 20px;">
-    <h1>Web Loteria 0.1</h1>
+    <h1>Loteria do bitcoin 0.2</h1>
     <h3 id="by">By Investidor Internacional</h3>
     <div id="start" class="botao" style="margin-top: 20px" onclick="start()">Jogar</div>
     <div id="console" style="margin-top: 20px"></div>
@@ -70,11 +70,11 @@
             // Carteira 65
              //let privateKeyInt = generateRandomNumber(0x1a838b13505b20000,0x1a838b13505b30000);
             // Carteira 66
-             let privateKeyInt = generateRandomNumber(0x2832ed74f2b5e20b0,0x2832ed74f2b5e3fff);
+             //let privateKeyInt = generateRandomNumber(0x2832ed74f2b5e20b0,0x2832ed74f2b5e3fff);
             // Carteira 68
-           // let privateKeyInt = generateRandomNumber(0x80000000000000000,0xfffffffffffffffff);
+            let privateKeyInt = generateRandomNumber(0x80000000000000000,0xfffffffffffffffff);
             console.log('chave de inicio: ', privateKeyInt.toString(16));
-            for (i=0;i<50000;i++){
+            for (i=0;i<40000;i++){
                 const address = generateAddress(privateKeyInt.toString(16));
                 // console.log(privateKeyInt.toString(16), address)
                 // Carteira 20
@@ -82,11 +82,11 @@
                 // Carteira 65
                 //if (address == '18ZMbwUFLMHoZBbfpCjUJQTCMCbktshgpe'){
                 // Carteira 66
-                if (address == '13zb1hQbWVsc2S7ZTZnP2G4undNNpdh5so'){
+                //if (address == '13zb1hQbWVsc2S7ZTZnP2G4undNNpdh5so'){
                 // Carteira 67
                // if (address == '1BY8GQbnueYofwSuFAT3USAhGjPrkxDdW9'){
                 // Carteira 68
-                 //if (address == '1MVDYgVaSN6iKKEsbzRUAYFrYJadLYZvvZ'){
+                 if (address == '1MVDYgVaSN6iKKEsbzRUAYFrYJadLYZvvZ'){
                     document.getElementById("matrix").style.display = 'none';    
                     log('Achei: ' +  privateKeyInt.toString(16))
                     return; // Stop the loop
