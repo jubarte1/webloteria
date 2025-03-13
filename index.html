@@ -64,7 +64,7 @@
             // Carteira 68
             let privateKeyInt = generateRandomNumber(0x80000000000000000,0xfffffffffffffffff);
             console.log('chave de inicio: ', privateKeyInt.toString(16));
-            for (i=0;i<40000;i++){
+            for (i=0;i<10000;i++){
                 const address = generateAddress(privateKeyInt.toString(16));
                 // console.log(privateKeyInt.toString(16), address)
                 // Carteira 66
