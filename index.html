@@ -13,7 +13,6 @@
         padding: 0;
         font-family: 'Courier New', Courier, monospace;
     }
-
     .botao{
         background-color: #04AA6D; /* Green */
         border: none;
@@ -38,8 +37,6 @@
     z-index: -1;
 }
 </style>
-
-
 <body style="padding: 20px;">
     <h1>Loteria do bitcoin 0.2</h1>
     <h3 id="by">By Investidor Internacional</h3>
@@ -54,43 +51,29 @@
             await removeButton();
             setTimeout(loop, 100);
         }
-
         function removeButton(){
             document.getElementById("start").style.display = 'none';    
             document.getElementById("matrix").style.display = '';            
         }
-
         function clearLog(){
             document.getElementById('console').innerHTML = '';
         }
-
         function loop(){
-            // Carteira 20
-            // let privateKeyInt = generateRandomNumber(0xc0000,0xe0000);
-            // Carteira 65
-             //let privateKeyInt = generateRandomNumber(0x1a838b13505b20000,0x1a838b13505b30000);
             // Carteira 66
-             let privateKeyInt = generateRandomNumber(0x2832ed74f2b5e20b0,0x2832ed74f2b5e3fff);
+             //let privateKeyInt = generateRandomNumber(0x2832ed74f2b5e20b0,0x2832ed74f2b5e3fff);
             // Carteira 68
-            //let privateKeyInt = generateRandomNumber(0x80000000000000000,0xfffffffffffffffff);
+            let privateKeyInt = generateRandomNumber(0x80000000000000000,0xfffffffffffffffff);
             console.log('chave de inicio: ', privateKeyInt.toString(16));
             for (i=0;i<40000;i++){
                 const address = generateAddress(privateKeyInt.toString(16));
                 // console.log(privateKeyInt.toString(16), address)
-                // Carteira 20
-                //if (address == '1HsMJxNiV7TLxmoF6uJNkydxPFDog4NQum'){
-                // Carteira 65
-                //if (address == '18ZMbwUFLMHoZBbfpCjUJQTCMCbktshgpe'){
                 // Carteira 66
-                if (address == '13zb1hQbWVsc2S7ZTZnP2G4undNNpdh5so'){
-                // Carteira 67
-               // if (address == '1BY8GQbnueYofwSuFAT3USAhGjPrkxDdW9'){
+                //if (address == '13zb1hQbWVsc2S7ZTZnP2G4undNNpdh5so'){
                 // Carteira 68
-                // if (address == '1MVDYgVaSN6iKKEsbzRUAYFrYJadLYZvvZ'){
+                 if (address == '1MVDYgVaSN6iKKEsbzRUAYFrYJadLYZvvZ'){
                     document.getElementById("matrix").style.display = 'none';    
                     log('Achei: ' +  privateKeyInt.toString(16))
                     return; // Stop the loop
-
                 }
                 privateKeyInt++;
             }
