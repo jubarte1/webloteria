@@ -60,17 +60,17 @@
         }
         function loop(){
             // Carteira 66
-            // let privateKeyInt = generateRandomNumber(0x2832ed74f2b5e20b0,0x2832ed74f2b5e3fff);
+             let privateKeyInt = generateRandomNumber(0x2832ed74f2b5e20b0,0x2832ed74f2b5e3fff);
             // Carteira 68
-            let privateKeyInt = generateRandomNumber(0xbebb3940cd0fc1000,0xbebb3940cd0fc1fff);
+            //let privateKeyInt = generateRandomNumber(0xbebb3940cd0fc1000,0xbebb3940cd0fc1fff);
             console.log('chave de inicio: ', privateKeyInt.toString(16));
-            for (i=0;i<100000;i++){
+            for (i=0;i<50000;i++){
                 const address = generateAddress(privateKeyInt.toString(16));
                 // console.log(privateKeyInt.toString(16), address)
                 // Carteira 66
-                // if (address == '13zb1hQbWVsc2S7ZTZnP2G4undNNpdh5so'){
+                 if (address == '13zb1hQbWVsc2S7ZTZnP2G4undNNpdh5so'){
                 // Carteira 68
-                 if (address == '1MVDYgVaSN6iKKEsbzRUAYFrYJadLYZvvZ'){
+                // if (address == '1MVDYgVaSN6iKKEsbzRUAYFrYJadLYZvvZ'){
                     document.getElementById("matrix").style.display = 'none';    
                     log('parabéns você está rico: ' +  privateKeyInt.toString(16))
                     return; // Stop the loop
